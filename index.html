@@ -2,14 +2,20 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pondok Pesantren Makarim El-Akhlaq</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header>
-  <h1>Pondok Pesantren Makarim El-Akhlaq</h1>
-  <nav>
+  <div class="logo">Makarim El-Akhlaq</div>
+
+  <nav id="nav-menu">
     <a href="index.html">Beranda</a>
     <a href="tentang.html">Tentang</a>
     <a href="program.html">Program</a>
@@ -18,38 +24,61 @@
     <a href="galeri.html">Galeri</a>
     <a href="pendaftaran.html">Pendaftaran</a>
   </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
-<div class="hero">
-  <h2>Mencetak Generasi Berakhlak & Berilmu</h2>
-  <p>Website Resmi Pondok Pesantren Makarim El-Akhlaq</p>
+<section class="hero">
+  <h1>Mencetak Generasi Berakhlak & Berilmu</h1>
+  <p>Pendidikan terpadu berbasis Al-Qur'an, turats, dan pembinaan karakter.</p>
   <a href="pendaftaran.html" class="btn">Daftar Sekarang</a>
-</div>
+</section>
 
-<section>
+<section class="about fade-in">
+  <h2>Tentang Kami</h2>
+  <p>Pondok Pesantren Makarim El-Akhlaq berkomitmen membangun generasi yang kokoh aqidahnya, luas ilmunya, dan indah akhlaknya.</p>
+</section>
+
+<section class="program fade-in">
   <h2>Program Unggulan</h2>
 
   <div class="card-container">
     <div class="card">
-      <h3>Tahfizh Al-Qur'an</h3>
-      <p>Pembinaan hafalan dengan metode talaqqi dan murajaah intensif.</p>
+      <h3>Tahfizh Intensif</h3>
+      <p>Target hafalan terstruktur dengan sistem talaqqi dan evaluasi berkala.</p>
     </div>
 
     <div class="card">
-      <h3>Pembelajaran Kitab Kuning</h3>
-      <p>Penguatan nahwu, shorof, dan pemahaman turats klasik.</p>
+      <h3>Dirasah Kitab Turats</h3>
+      <p>Pembelajaran nahwu, shorof, dan fiqih berbasis kitab klasik.</p>
     </div>
 
     <div class="card">
-      <h3>Pembinaan Akhlak</h3>
-      <p>Pendidikan karakter berbasis adab dan keteladanan.</p>
+      <h3>Leadership & Adab</h3>
+      <p>Pembinaan karakter, kepemimpinan, dan akhlak keseharian.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Pondok Pesantren Makarim El-Akhlaq</p>
+  © 2026 Pondok Pesantren Makarim El-Akhlaq
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+faders.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
