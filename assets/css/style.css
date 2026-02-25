@@ -87,6 +87,10 @@ nav a:hover {
   background: #e5e5e5;
 }
 
+.small-hero {
+  padding: 80px 20px;
+}
+
 /* SECTION */
 section {
   padding: 80px 20px;
