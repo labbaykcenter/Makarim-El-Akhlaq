@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Nilai - Makarim El-Akhlaq</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Makarim El-Akhlaq</div>
+
+  <nav id="nav-menu">
+    <a href="index.html">Beranda</a>
+    <a href="nilai.html">Nilai</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="hero small-hero">
+  <h1>Portal Informasi Nilai</h1>
+  <p>Rekap nilai harian dan semester santri.</p>
+</section>
+
+<section>
+  <h2>Pilih Kelas</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+      <h3>Kelas 7</h3>
+      <p>Rekap nilai semester dan ulangan.</p>
+      <a href="nilai/kelas-7.html" class="btn">Lihat Nilai</a>
+    </div>
+
+    <div class="card">
+      <h3>Kelas 8</h3>
+      <p>Rekap nilai semester dan ulangan.</p>
+      <a href="nilai/kelas-8.html" class="btn">Lihat Nilai</a>
+    </div>
+
+    <div class="card">
+      <h3>Kelas 9</h3>
+      <p>Rekap nilai semester dan ulangan.</p>
+      <a href="nilai/kelas-9.html" class="btn">Lihat Nilai</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Pondok Pesantren Makarim El-Akhlaq
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
