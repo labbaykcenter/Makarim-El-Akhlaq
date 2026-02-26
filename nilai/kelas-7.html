@@ -46,22 +46,30 @@
 <script src="../assets/js/data-kelas7.js"></script>
 
 <script>
-const tbody = document.querySelector("#tabel-nilai tbody");
+window.addEventListener("DOMContentLoaded", function () {
 
-dataNilai.forEach(santri => {
-  const rata = ((santri.fiqih + santri.nahwu + santri.tahfizh) / 3).toFixed(1);
+  const tbody = document.querySelector("#tabel-nilai tbody");
 
-  const row = `
-    <tr>
-      <td>${santri.nama}</td>
-      <td>${santri.fiqih}</td>
-      <td>${santri.nahwu}</td>
-      <td>${santri.tahfizh}</td>
-      <td>${rata}</td>
-    </tr>
-  `;
+  if (typeof dataNilai !== "undefined") {
+    dataNilai.forEach(santri => {
+      const rata = ((santri.fiqih + santri.nahwu + santri.tahfizh) / 3).toFixed(1);
 
-  tbody.innerHTML += row;
+      const row = `
+        <tr>
+          <td>${santri.nama}</td>
+          <td>${santri.fiqih}</td>
+          <td>${santri.nahwu}</td>
+          <td>${santri.tahfizh}</td>
+          <td>${rata}</td>
+        </tr>
+      `;
+
+      tbody.innerHTML += row;
+    });
+  } else {
+    tbody.innerHTML = "<tr><td colspan='5'>Data belum tersedia</td></tr>";
+  }
+
 });
 </script>
 
