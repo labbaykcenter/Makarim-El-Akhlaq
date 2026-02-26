@@ -1,4 +1,4 @@
-var dataNilai = [
+window.dataNilai = [
   {
     nama: "Ahmad Fauzi",
     fiqih: 88,
