@@ -45,16 +45,19 @@
 
 <script src="../assets/js/data-kelas7.js"></script>
 
+<script src="../assets/js/data-kelas7.js"></script>
 <script>
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
 
   const tbody = document.querySelector("#tabel-nilai tbody");
 
-  if (typeof dataNilai !== "undefined") {
-    dataNilai.forEach(santri => {
+  console.log("Isi data:", window.dataNilai);
+
+  if (window.dataNilai) {
+    window.dataNilai.forEach(santri => {
       const rata = ((santri.fiqih + santri.nahwu + santri.tahfizh) / 3).toFixed(1);
 
-      const row = `
+      tbody.innerHTML += `
         <tr>
           <td>${santri.nama}</td>
           <td>${santri.fiqih}</td>
@@ -63,8 +66,6 @@ window.addEventListener("DOMContentLoaded", function () {
           <td>${rata}</td>
         </tr>
       `;
-
-      tbody.innerHTML += row;
     });
   } else {
     tbody.innerHTML = "<tr><td colspan='5'>Data belum tersedia</td></tr>";
