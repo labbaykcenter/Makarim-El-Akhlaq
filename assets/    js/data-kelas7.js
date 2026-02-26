@@ -1,4 +1,4 @@
-const dataNilai = [
+var dataNilai = [
   {
     nama: "Ahmad Fauzi",
     fiqih: 88,
@@ -10,5 +10,5 @@ const dataNilai = [
     fiqih: 82,
     nahwu: 80,
     tahfizh: 89
-  } 
+  }
 ];
