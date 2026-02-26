@@ -10,5 +10,5 @@ const dataNilai = [
     fiqih: 82,
     nahwu: 80,
     tahfizh: 89
-  }
+  } 
 ];
