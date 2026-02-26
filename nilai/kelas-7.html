@@ -24,37 +24,46 @@
 </section>
 
 <section>
-  <table>
-    <tr>
-      <th>Nama Santri</th>
-      <th>Fiqih</th>
-      <th>Nahwu</th>
-      <th>Tahfizh</th>
-      <th>Rata-rata</th>
-    </tr>
-
-    <tr>
-      <td>Ahmad Fauzi</td>
-      <td>88</td>
-      <td>85</td>
-      <td>90</td>
-      <td>87.6</td>
-    </tr>
-
-    <tr>
-      <td>Abdullah</td>
-      <td>82</td>
-      <td>80</td>
-      <td>89</td>
-      <td>83.6</td>
-    </tr>
-
+  <table id="tabel-nilai">
+    <thead>
+      <tr>
+        <th>Nama Santri</th>
+        <th>Fiqih</th>
+        <th>Nahwu</th>
+        <th>Tahfizh</th>
+        <th>Rata-rata</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
   </table>
 </section>
 
 <footer>
   © 2026 Pondok Pesantren Makarim El-Akhlaq
 </footer>
+
+<script src="../assets/js/data-kelas7.js"></script>
+
+<script>
+const tbody = document.querySelector("#tabel-nilai tbody");
+
+dataNilai.forEach(santri => {
+  const rata = ((santri.fiqih + santri.nahwu + santri.tahfizh) / 3).toFixed(1);
+
+  const row = `
+    <tr>
+      <td>${santri.nama}</td>
+      <td>${santri.fiqih}</td>
+      <td>${santri.nahwu}</td>
+      <td>${santri.tahfizh}</td>
+      <td>${rata}</td>
+    </tr>
+  `;
+
+  tbody.innerHTML += row;
+});
+</script>
 
 </body>
 </html>
